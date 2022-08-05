@@ -32,7 +32,7 @@ export function createRestApi(client: Client) {
     return res.status(200).send('Message sent');
   });
 
-  app.post("'/resolve", async (req, res) => {
+  app.post('/resolve', async (req, res) => {
     const { threadId } = req.query;
 
     if (!threadId) return res.status(400).send('Missing threadID');
